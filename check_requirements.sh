@@ -3,6 +3,9 @@
 echo "Checking Dependencies"
 echo "----------------------------------------"
 
+echo "Checking Homebrew version"
+brew -v
+
 echo "Checking Java version"
 Java -version
 
