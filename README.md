@@ -21,6 +21,11 @@ The SparkContext (sc) is created by your driver program and is responsible for m
 ----------------------------------------------------------------------------------------------------
 ## Basic Functions
 
+Running a Spark Job in Bash
+```sh
+spark-submit <spark job file>.py
+```
+
 1. Create RDD list 
 ```python
 nums = parallelize([1,2,3,4])
