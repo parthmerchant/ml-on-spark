@@ -1,0 +1,2 @@
+Best document for Gettysburg is:
+(33.13476250917198, 'Abraham Lincoln')

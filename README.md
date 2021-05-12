@@ -16,8 +16,10 @@ chmod u+x run.sh
 ```
 
 Available Programs:
-- DecisionTree (Supervised Learning)
-- KMeansClustering (Unsupervised Learning)
+- DecisionTree
+- KMeansClustering 
+- TFIDF
+- LinearRegression
 
 ----------------------------------------------------------------------------------------------------
 
