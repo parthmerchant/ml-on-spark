@@ -72,3 +72,17 @@ Data Types:
 - Vector (dense/sparse)
 - LabeledPoint - point with a label 
 - Rating - Recommendations
+
+----------------------------------------------------------------------------------------------------------------------
+TF/IDF (Term Frequency and Inverse Document Frequency)
+- Important for data search (most relevant terms)
+- Term frequency - how often a word occurs in a document 
+- Document frequency - how often a word occurs in an entire set of documents
+
+Measure of the relevancy of a word to a document:
+TF/DF = Term Frequency * Inverse Document Frequency
+
+Using TF-IDF:
+- Compute TF-IDF for every word in a corpus
+- For a given search word, sort the documents by their TF-IDF score for that word
+- Display the results
