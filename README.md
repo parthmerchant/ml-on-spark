@@ -4,75 +4,75 @@
 
 Machine learning on Apache Spark and MLLib. Notes on setting up Spark MapReduce jobs, supervised and unsupervised learning for Big Data and real-world applications.
 
-What is Spark? Apache Spark is a scalable, fast and distrbuted engine for large-scale data processing.
-- Directed acyclic graph optimizes workflows
-- Written in Scala, built on top of Java
+----------------------------------------------------------------------------------------------------
 
-### Components of Spark:
-SPARK CORE - Core functions
-- Spark Streaming - Real-time big data processing
-- Spark SQL - Treat data as a SQL Database
-- MLLib - Machine Learning on big data
-- Graph X - Graph/Network Analysis
+# Usage
 
-### Resilient Distributed Datasets (RDDs)
-The SparkContext (sc) is created by your driver program and is responsible for making RDD's resilient and distributed!
+Use the run.sh file as a CLI
+
+```sh
+chmod u+x run.sh
+./run.sh <name of program>
+```
+
+Available Programs:
+- DecisionTree (Supervised Learning)
+- KMeansClustering (Unsupervised Learning)
 
 ----------------------------------------------------------------------------------------------------
-## Basic Functions
 
-Running a Spark Job in Bash
+# Dependencies 
+- Java, Scala, Python, Homebrew
+
+Use check_requirements.sh to see if you have all 4 installed. Otherwise, follow the instructions below to install.
+
 ```sh
-spark-submit <spark job file>.py
+chmod u+x check_requirements.sh
+./check_requirements.sh
 ```
 
-1. Create RDD list 
-```python
-nums = parallelize([1,2,3,4])
+## Installing on MacOS
+
+Update Homebrew (or install at https://brew.sh/)
+```sh
+brew upgrade && brew update
 ```
 
-2. Load text File into SparkContext (JSON, CSV, Hive, Cassandra, HBase, Elasticsearch, JDBC)
-```python
-# Locally
-sc.textFile("file://<path>")
+Check Java
+```sh
+Java -version
 
-# HDFS
-sc.textFile("hdfs://<path>")
+# Otherwise
+brew install java8
 ```
 
-3. Transformations
-- map
-- flatmap
-- filter
-- distinct
-- sample
-- union, intersection, subtract, cartesian
+Check Scala
+```sh
+scala -version
 
-Map()
-```python
-# lambda function 
-rdd.map(lambda x: x*x)
+# Otherwise
+brew install scala
 ```
 
-RDD Actions
-- collect - Collect Objects
-- count - Count Objects in RDD
-- countByValue - Count By Value
-- take - Indexing objects in RDD
-- reduce - Reduce By Key
+Check Python (pyspark)
+```sh
+python3 -V
 
-Docs: https://spark.apache.org/docs/latest/
+# Otherwise
+brew install python
+```
 
--------------------------------------------------------------------------------------------------------------
+Install Apache Spark
+```sh
+brew install apache-spark
+```
 
-## MLLib
+Use check_requirements.sh to see if you have all 4 installed.
 
-Capabilities: 
-- Feature extraction (TF/IDF)
-- Statistics
-- ML Algorithms: Linear Regression, Logistic Regression, SVMs, Naive Bayes classifier, Decision Trees, K-Means clustering, Principle component analysis, singular value decomposition
+```sh
+chmod u+x check_requirements.sh
+./check_requirements.sh
+```
 
-Data Types:
-- Vector (dense/sparse)
-- LabeledPoint - point with a label 
-- Rating - Recommendations
+If this check passes, you're good to get started using Apache Spark!
+

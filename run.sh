@@ -9,3 +9,8 @@ command=$1;
 if [ $1 = "DecisionTree" ]; then
     spark-submit decision_tree.py
 fi
+
+# KMeansClustering
+if [ $1 = "KMeansClustering" ]; then
+    spark-submit k_means_clustering.py
+fi

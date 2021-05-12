@@ -62,8 +62,10 @@ model = DecisionTree.trainClassifier(trainingData, numClasses=2,
 predictions = model.predict(testData)
 print('Hire prediction:')
 results = predictions.collect()
+i = 0
 for result in results:
-    print(result)
+    print("Prediction for index "+i+": " +result)
+    i+=1
 
 # We can also print out the decision tree itself:
 print('Learned classification tree model:')
